@@ -1,7 +1,7 @@
 # test_bellmanFord.py
 
 import unittest
-from bellmanFord import bellmanFord  # Adjust if your function is in a different file
+from FordBellman import bellmanFord  # Adjust if your function is in a different file
 
 class BellmanFordTest(unittest.TestCase):
 
