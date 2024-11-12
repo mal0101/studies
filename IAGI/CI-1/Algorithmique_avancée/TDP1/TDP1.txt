@@ -1,0 +1,17 @@
+Exercice 1:
+1-a-
+Pour n = 1:
+L'égalité est vraie
+Soit n appartenant à l'ensemble des entiers non nuls
+On suppose que 1 + 2 + .... + n = n(n + 1)/2
+Et on montre que 1 + 2 + ... + n + (n + 1) = (n+1)(n+2)/2
+Comme 1 + 2 + .... + n = n(n + 1)/2
+en ajoutant (n+1) dans les deux termes de l'égalité on aura:
+1 + 2 + ... + n + (n + 1) = n(n+1)/2 + (n+1)
+ce qui implique:
+1 + 2 + ... + n + (n + 1) = (n+1)(n+2)/2
+Donc l'égalité est vraie pour tout n dans l'ensemble des entiers non nuls
+1-b-
+De même
+2-
+ 
