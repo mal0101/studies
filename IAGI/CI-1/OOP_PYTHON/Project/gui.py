@@ -15,57 +15,49 @@ class InventoryGUI:
         self.style.configure("TRadiobutton", font=("Helvetica", 12))
         self.style.configure("TButton", font=("Helvetica", 12, "bold"))
 
-        self.create_type_selection_page()
+        self.create_main_page()
 
-    def create_type_selection_page(self):
+    def create_main_page(self):
         self.clear_frame()
 
-        frame_type = ttk.Frame(self.root, padding="10")
-        frame_type.pack(pady=10)
+        frame_main = ttk.Frame(self.root, padding="10")
+        frame_main.pack(pady=10)
 
-        ttk.Label(frame_type, text="Choisissez le type de produit:", style="TLabel").pack(pady=5)
+        ttk.Label(frame_main, text="Choisissez le type de produit:", style="TLabel").pack(pady=5)
 
-        ttk.Radiobutton(frame_type, text="Électronique", variable=self.type_produit, value="electronique", style="TRadiobutton").pack(pady=5)
-        ttk.Radiobutton(frame_type, text="Alimentaire", variable=self.type_produit, value="alimentaire", style="TRadiobutton").pack(pady=5)
+        ttk.Radiobutton(frame_main, text="Électronique", variable=self.type_produit, value="electronique", style="TRadiobutton").pack(pady=5)
+        ttk.Radiobutton(frame_main, text="Alimentaire", variable=self.type_produit, value="alimentaire", style="TRadiobutton").pack(pady=5)
 
-        ttk.Button(frame_type, text="Suivant", command=self.create_product_info_page, style="TButton").pack(pady=10)
+        ttk.Label(frame_main, text="Nom:", style="TLabel").pack(pady=5)
+        self.nom_entry = ttk.Entry(frame_main)
+        self.nom_entry.pack(pady=5)
 
-    def create_product_info_page(self):
-        self.clear_frame()
+        ttk.Label(frame_main, text="Prix:", style="TLabel").pack(pady=5)
+        self.prix_entry = ttk.Entry(frame_main)
+        self.prix_entry.pack(pady=5)
 
-        frame_ajout = ttk.Frame(self.root, padding="10")
-        frame_ajout.pack(pady=10)
+        ttk.Label(frame_main, text="Quantité:", style="TLabel").pack(pady=5)
+        self.quantite_entry = ttk.Entry(frame_main)
+        self.quantite_entry.pack(pady=5)
 
-        ttk.Label(frame_ajout, text="Nom:", style="TLabel").grid(row=0, column=0, padx=5, pady=5)
-        self.nom_entry = ttk.Entry(frame_ajout)
-        self.nom_entry.grid(row=0, column=1, padx=5, pady=5)
+        self.extra_entry_label = ttk.Label(frame_main, style="TLabel")
+        self.extra_entry_label.pack(pady=5)
+        self.extra_entry = ttk.Entry(frame_main)
+        self.extra_entry.pack(pady=5)
 
-        ttk.Label(frame_ajout, text="Prix:", style="TLabel").grid(row=1, column=0, padx=5, pady=5)
-        self.prix_entry = ttk.Entry(frame_ajout)
-        self.prix_entry.grid(row=1, column=1, padx=5, pady=5)
+        ttk.Button(frame_main, text="Ajouter Produit", command=self.ajouter_produit, style="TButton").pack(pady=10)
+        ttk.Button(frame_main, text="Afficher Produits", command=self.afficher_produits, style="TButton").pack(pady=5)
 
-        ttk.Label(frame_ajout, text="Quantité:", style="TLabel").grid(row=2, column=0, padx=5, pady=5)
-        self.quantite_entry = ttk.Entry(frame_ajout)
-        self.quantite_entry.grid(row=2, column=1, padx=5, pady=5)
-
-        if self.type_produit.get() == "electronique":
-            ttk.Label(frame_ajout, text="Garantie (mois):", style="TLabel").grid(row=3, column=0, padx=5, pady=5)
-            self.garantie_entry = ttk.Entry(frame_ajout)
-            self.garantie_entry.grid(row=3, column=1, padx=5, pady=5)
-        elif self.type_produit.get() == "alimentaire":
-            ttk.Label(frame_ajout, text="Date de péremption:", style="TLabel").grid(row=3, column=0, padx=5, pady=5)
-            self.date_peremption_entry = ttk.Entry(frame_ajout)
-            self.date_peremption_entry.grid(row=3, column=1, padx=5, pady=5)
-
-        ttk.Button(frame_ajout, text="Ajouter Produit", command=self.ajouter_produit, style="TButton").grid(row=4, columnspan=2, pady=10)
-
-        frame_afficher = ttk.Frame(self.root, padding="10")
-        frame_afficher.pack(pady=10)
-
-        ttk.Button(frame_afficher, text="Afficher Produits", command=self.afficher_produits, style="TButton").pack(pady=5)
-
-        self.produits_listbox = tk.Listbox(frame_afficher, width=50, font=("Helvetica", 10))
+        self.produits_listbox = tk.Listbox(frame_main, width=50, font=("Helvetica", 10))
         self.produits_listbox.pack(pady=5)
+
+        self.type_produit.trace("w", self.update_extra_entry)
+
+    def update_extra_entry(self, *args):
+        if self.type_produit.get() == "electronique":
+            self.extra_entry_label.config(text="Garantie (mois):")
+        elif self.type_produit.get() == "alimentaire":
+            self.extra_entry_label.config(text="Date de péremption:")
 
     def clear_frame(self):
         for widget in self.root.winfo_children():
@@ -77,10 +69,10 @@ class InventoryGUI:
         quantite = int(self.quantite_entry.get())
 
         if self.type_produit.get() == "electronique":
-            garantie = self.garantie_entry.get()
+            garantie = self.extra_entry.get()
             produit = ProduitElectronique(nom, prix, quantite, garantie)
         elif self.type_produit.get() == "alimentaire":
-            date_peremption = self.date_peremption_entry.get()
+            date_peremption = self.extra_entry.get()
             produit = ProduitAlimentaire(nom, prix, quantite, date_peremption)
 
         self.inventaire.ajouter_produit(produit)
