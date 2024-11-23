@@ -13,9 +13,9 @@ typedef struct node {
 
 struct node * top = NULL;
 void Push(int x) {
-    struct Node * temp  = (struct node *)malloc(sizeof(struct node *));
+    struct node * temp  = (struct node *)malloc(sizeof(struct node));
     temp->data = x;
-    temp->next=top;
+    temp->next = top;
     top = temp;
 }
 void Pop(){
