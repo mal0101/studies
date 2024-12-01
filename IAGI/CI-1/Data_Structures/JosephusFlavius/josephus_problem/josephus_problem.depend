@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1733090375 source:c:\users\chahi\documents\s1\structure_de_donnees\josephus_problem\main.c
+	"biblio.h"
+
+1733089842 c:\users\chahi\documents\s1\structure_de_donnees\josephus_problem\biblio.h
+	<stdio.h>
+	<stdlib.h>
+
+1733089417 source:c:\users\chahi\documents\s1\structure_de_donnees\josephus_problem\function.c
+	"biblio.h"
+
