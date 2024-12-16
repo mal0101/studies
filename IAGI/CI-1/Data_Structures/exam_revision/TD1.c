@@ -335,13 +335,27 @@ void create_ordered_circular_linked_list(node ** head, int * tab, int n) {
 }
 
 
+// Exercice 10: Réaliser le chaînage arrière d’une liste doublement chaînée
+
+void chainage_arriere(node ** head) {
+    node * current = * head;
+    while (current->next != NULL) {
+        current = current->next;
+    }
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->prev;
+    }
+    printf("NULL\n");
+}
+
 // Main function to test the above functions
 
 
 
  int main () {
     // Create a linked list: 1 -> 2 -> 3 -> 4 -> 5 -> NULL
-   /** node* head = createNode(3);
+    node* head = createNode(3);
     head->next = createNode(2);
     head->next->next = createNode(3);
     head->next->next->next = createNode(4);
@@ -364,18 +378,19 @@ void create_ordered_circular_linked_list(node ** head, int * tab, int n) {
     //refermer_linked_list(&head);
     // Print the modified linked list
     printf("Modified linked list: \n");
-    print_circular_linked_list(head);
+    // print_circular_linked_list(head);
 
     return 0;
 
-    node* head = NULL;
+/**     node* head = NULL;
     saisir_polynome(&head);
     return 0;
-*/
+
     node* head = NULL;
     int tab[] = {5, 3, 7, 2, 1, 4, 6};
     int n = sizeof(tab) / sizeof(tab[0]);
     create_ordered_circular_linked_list(&head, tab, n);
     print_circular_linked_list(head);
+    */
     return 0;
 }

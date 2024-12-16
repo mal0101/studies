@@ -28,6 +28,9 @@ void refermer_linked_list(node ** head);
 void print_circular_linked_list(node *head);
 void saisir_polynome(node ** head);
 void evaluer_polynome(node * head, int x);
-
+void refermer_linked_list(node ** head);
+void saisir_polynome(node ** head);
+void evaluer_polynome(node * head, int x);
+void chainage_arriere(node ** head);
 
 #endif
