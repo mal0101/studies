@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border-collapse: separate;
+            border: 3px solid red;
+            border-spacing: 5px;
+        }
+        th, td {
+            border: 3px solid orange;
+            padding: 7px;
+            text-align: center;
+        }
+        th {
+            background-color: orange;
+            font-weight: bold;
+        }
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .red {
+            background-color: red;
+            color: white;
+        }
+        .green {
+            background-color: green;
+            color: white;
+        }
+        .orange {
+            background-color: orange;
+            color: black;
+        }
+        .fieldset {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <fieldset name="info-perso" class="fieldset">
+        <legend><span style="color:blue">Informations Personnelles</span></legend>
+        
+            Nom(s) <span style="color:red">*</span> :<input type="text" name="nom" placeholder="Saisir Nom" required>
+            <br>
+            Prénom(s) <span style="color:red">*</span> :<input type="text" name="prenom" placeholder="Saisir Prénom" required>
+            <br>
+        
+        <fieldset name="naissance"  class="fieldset">
+            <legend><span style="color:blue">Naissance:</span></legend>
+                Date <span style="color:red">*</span> :<input type="date" name="date"  placeholder="jj/mm/aaaa" required><br>
+                Ville <span style="color:red">*</span> :<select name="ville" required>
+                    <option value="None"></option>
+                    <option value="Casablanca">Casablanca</option>
+                    <option value="other">Autre</option>
+                </select>
+        </fieldset>
+        <br>
+        <fieldset name="coordonnees"  class="fieldset">
+            <legend><span style="color:red">Coordonées:</span></legend>
+            Téléphone <span style="color:red">*</span> :<input type="tel" name="tel" placeholder="10 chiffres" minlength="10" maxlength="10" required> <br>
+            Adresse <span style="color:red">*</span> :<textarea required></textarea> <br>
+            Ville <span style="color:red">*</span> :<select name="ville" required>
+                <option value="None"></option>
+                <option value="Casablanca">Casablanca</option>
+                <option value="other">Autre</option>
+            </select> <br>
+            Code Postal:<input type="number" name="code" placeholder="5 chiffres Max" maxlength="5"> <br>
+        </fieldset>
+        <br>
+    <fieldset name="interets"  class="fieldset">
+        <legend><span style="color:green">Centre d'intéret: (cocher au moins 2 choix)</span></legend>
+        <input type="checkbox"> Science
+        <input type="checkbox"> Litterature
+        <input type="checkbox"> Théatre
+        <br>
+        <br>
+        <input type="checkbox"> Cuisine
+        <input type="checkbox"> Histoire
+        <input type="checkbox"> Sport
+        <br>
+    </fieldset>
+    <br>
+    <fieldset name="tableaux"  class="fieldset">
+        <legend><span style="color:red">Tableaux en HTML:</span></legend>
+        <p>Le tableau suivant doit contenir un espacement de 5 pour le spacing et de 7 pour le padding et une brodure <br> d'épaisseur de bordure de 3:</p>
+        <br>
+        <table>
+            <tr>
+                <th colspan="3">champ1 - champ2 - champ3</th>
+                <th>champ4</th>
+            </tr>
+            <tr>
+                <td class="blue">Ben Abderrahmane</td>
+                <td class="orange">Mohammed Reda</td>
+                <td class="blue">VAdr 1</td>
+                <td class="blue">Vville1</td>
+            </tr>
+            <tr>
+                <td class="yellow" rowspan="2">Ben Abdellah</td>
+                <td class="green">Zakaria</td>
+                <td colspan="2" rowspan="2">meme addresse</td>
+            </tr>
+            <tr>
+                <td class="orange">Zakia</td>
+            </tr>
+            <tr>
+                <td class="orange">Ben Elmoundiri</td>
+                <td class="orange">Bahae Eddine</td>
+                <td colspan="3" class="red">Aucune valeur saisie</td>
+            </tr>
+        </table>
+        <br>
+        <caption><span style="font-size:smaller;text-align:center;">Liste des coordonnées</span></caption>
+        <br>
+        
+    </fieldset>
+    <br>
+    <span style="color:red"> * </span> <strong><u>Champs obligatoires</u></strong> <br>
+    <br>
+    <button type="submit" class="button">Envoyer</button>
+    <button type="reset" class="button">Réinitialiser</button>
+</fieldset>
+</fieldset>
+</form>
+</body>
+</html>
+</body>
