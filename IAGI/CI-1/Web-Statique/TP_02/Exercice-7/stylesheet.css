@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+.gradient-div {
+    background: linear-gradient(to right, blue, red);
+    color: yellow;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+h1 {
+    margin: 0;
+}
+@keyframes rotateAndScale {
+    0% { transform: rotate(0deg) scale(1); }
+    5% { transform: rotate(18deg) scale(1.2); }
+    10% { transform: rotate(36deg) scale(0.8); }
+    15% { transform: rotate(54deg) scale(1.2); }
+    20% { transform: rotate(72deg) scale(0.8); }
+    25% { transform: rotate(90deg) scale(1.2); }
+    30% { transform: rotate(108deg) scale(0.8); }
+    35% { transform: rotate(126deg) scale(1.2); }
+    40% { transform: rotate(144deg) scale(0.8); }
+    45% { transform: rotate(162deg) scale(1.2); }
+    50% { transform: rotate(180deg) scale(0.8); }
+    55% { transform: rotate(198deg) scale(1.2); }
+    60% { transform: rotate(216deg) scale(0.8); }
+    65% { transform: rotate(234deg) scale(1.2); }
+    70% { transform: rotate(252deg) scale(0.8); }
+    75% { transform: rotate(270deg) scale(1.2); }
+    80% { transform: rotate(288deg) scale(0.8); }
+    85% { transform: rotate(306deg) scale(1.2); }
+    90% { transform: rotate(324deg) scale(0.8); }
+    95% { transform: rotate(342deg) scale(1.2); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+h2 {
+    animation: rotateAndScale 20s infinite;
+    animation-delay: 2s;
+}

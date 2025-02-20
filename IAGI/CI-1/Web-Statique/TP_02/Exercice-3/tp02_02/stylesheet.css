@@ -1,0 +1,31 @@
+.italic {
+    font-style:italic;
+}
+h1 {
+    color: #58ACFA;
+    text-align: center;
+}
+table {
+    border: 2px solid #58ACFA;
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-header {
+    background: black;
+    color:white;
+    text-align: center;
+}
+td {
+    background-color: #aecea5;
+    text-align: justify;
+}
+th, td {
+    border: 1px solid black;
+}
+td:empty {
+    background-color: green;
+}
+caption {
+    caption-side: bottom;
+    color:#060;
+}

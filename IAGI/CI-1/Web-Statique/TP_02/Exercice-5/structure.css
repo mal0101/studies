@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+.header, .footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+.content {
+    display: flex;
+    flex: 1;
+}
+.sidebar {
+    background-color: #e1e1e1;
+    width: 200px;
+    padding: 20px;
+}
+.droite {
+    flex: 1;
+    padding: 20px;
+}

@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+a {
+    color: green;
+}
+a:hover {
+    color: orange;
+}
+a:visited {
+    color: rgb(1, 68, 1);
+}
+.img-circle {
+    width:25%;
+    height:auto;
+    border-radius: 50%;
+}
+.name {
+    font-size: 3em;
+    letter-spacing: -6px;
+    font-weight: 100em;
+}
+.section {
+    border: 2px solid seagreen;
+}
+.emph {
+    font-style:italic;
+    color:orange;
+}
+.columns {
+    column-count: 2;
+    column-gap: 20px;
+}
