@@ -10,6 +10,9 @@
     <header>
         <img src="/IAGI/CI-1/Web-Statique/TP_02/Exercice-2/cv-picture.jpeg" alt="Photo de la personne" class="img-circle">
         <h1 class="name">Nom de la personne</h1>
+        <div class="activity">
+            <br />Ingénieur en ML
+        </div>
     </header>
     <nav>
         <ul>
@@ -18,19 +21,11 @@
             <li><a href="#contact">Me contacter</a></li>
         </ul>
     </nav>
-    <section id="about" class="section"></section>
+    <section id="about" class="section">
         <h2>À propos de moi</h2>
         <div class="columns"></div>
             <div>
-                <p>Lorem <span class="emph">ipsum dolor sit amet consectetur adipisicing elit</span>. Aut rem nesciunt culpa. Aliquam nemo vero fuga dolorem doloremque molestiae recusandae quidem. Voluptate harum quaerat, facere incidunt sed sapiente beatae sunt
-                </p>
-                <h3>Parcours</h3>
-                <p>Décrire votre parcours estudiantin ici...</p>
-                <ul>
-                    <li>Centre d'intérêt 1</li>
-                    <li>Centre d'intérêt 2</li>
-                    <li>Centre d'intérêt 3</li>
-                </ul>
+                <p>Lorem <span class="emph">ipsum dolor sit amet consectetur adipisicing elit</span>. Aut rem nesciunt culpa. Aliquam nemo vero fuga dolorem doloremque molestiae recusandae quidem. Voluptate harum quaerat, facere incidunt sed sapiente beatae sunt</p>
             </div>
             <div>
                 <h3>Informations personnelles</h3>
@@ -39,8 +34,23 @@
                 <p>Adresse: 123 Rue Exemple, 75000 Paris</p>
             </div>
         </div>
+        <fieldset class="section">
+            <legend>Parcours</legend>
+            <p>
+                <strong class="bold-date">2025 - Présent :</strong> École Centrale Casablanca - Cycle Ingénieur en Intelligence Artificielle et Data Science
+            </p>
+            <p>
+                <strong class="bold-date">2023 - 2025 :</strong> Classes préparatoires aux grandes écoles (CPGE) - Filière PSI
+            </p>
+            <p>
+                <strong class="bold-date">2022 - 2023 :</strong> Licence en Mathématiques Appliquées et Informatique - Université Hassan II
+            </p>
+            <p>
+                <strong class="bold-date">2021 - 2022 :</strong> Baccalauréat Scientifique - Mention Très Bien
+            </p>
+        </fieldset>
     </section>
-    <section id="skills" class="section"></section>
+    <section id="skills" class="section">
         <h2>Mes compétences</h2>
         <table>
             <thead>
@@ -69,7 +79,7 @@
             </tbody>
         </table>
     </section>
-    <section id="contact" class="section"></section>
+    <section id="contact" class="section">
         <h2>Me contacter</h2>
         <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
             <label for="name">Nom:</label>

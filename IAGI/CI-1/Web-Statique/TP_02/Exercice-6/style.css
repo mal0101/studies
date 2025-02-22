@@ -1,0 +1,37 @@
+div {
+    width: 200px;
+    height: 150px;
+    text-align: center;
+  }
+  h4 {
+    text-align: center;
+  }
+  
+  #un {
+    background-color: blue;
+    left: 200px;
+    top: 50px;
+  }
+  #deux {
+    background-color: green;
+    left: 200px;
+    top: 200px;
+  }
+  #trois {
+    background-color: greenyellow;
+    left: 400px;
+    top: 50px;
+  }
+  #quatre {
+    background-color: bisque;
+    left: 400px;
+    top: 200px;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  .opacity {
+    opacity: 50%;
+  }
+  
