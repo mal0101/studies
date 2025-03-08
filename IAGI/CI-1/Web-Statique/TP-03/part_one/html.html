@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            padding-left: 40px;
+            padding-right: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            text-align: left;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input, select, button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+    
+ 
+</head>
+<body>
+    <script>
+        function verification_age(date_naissance){
+            let date_birth = new Date(date_naissance);
+            let date_today = new Date();
+            let age = date_today.getFullYear() - date_birth.getFullYear();
+            let month_diff = date_today.getMonth() - date_birth.getMonth();
+            let day_diff = date_today.getDate() - date_birth.getDate();
+            if (month_diff < 0 || (month_diff === 0 && day_diff < 0)) {
+                age--;
+            }//si jour ou mois non atteint on enleve 1 an
+            return age >= 14;    
+        }
+        
+        
+        function verification_mdp(password , confirm_password){
+            return password === confirm_password;
+        }
+        
+        function verification_form(event){
+            event.preventDefault();// Empêche l'envoi du formulaire
+            let dateNaissance = document.getElementById("date").value;
+            let password = document.getElementById("password").value;
+            let confirm_password = document.getElementById("confirm_password").value;
+            if (!verification_age(dateNaissance)){
+                alert("Vous devez avoir au moins 14 ans pour vous inscrire");
+                return ;
+            }
+            if(!verification_mdp(password,confirm_password)){
+                alert("Les mots de passe ne correspondent pas");
+                return ;
+            }
+        
+            alert("formulaire envoye avec succes");
+        
+        }
+        
+        document.getElementById("form").addEventListener("submit", verification_form);
+    </script>
+    <h2 style="padding-bottom: 20px;">Formulaire d'inscription</h2>
+    <form id="form">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" required>
+        
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" required>
+        
+        <label for="date">Date de naissance :</label>
+        <input type="date" id="date" required>
+        
+        <label for="height">Hauteur :</label>
+        <input type="number" id="height" required>
+        <select id="height_unit">
+            <option value="cm">Centimètre</option>
+            <option value="inch">Inch</option>
+        </select>
+        
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" required>
+        
+        <label for="confirm_password">Confirmer le mot de passe :</label>
+        <input type="password" id="confirm_password" required>
+        
+        <button type="submit">Valider</button>
+    </form>
+
+</body>
+</html>
