@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Timer</title>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">0 sec</div>
+    <button onclick="window.close()">Fermer la page</button>
+    <script>
+        let seconds = 0;
+        const timerDiv = document.getElementById('timer');
+
+        const updateTimer = () => {
+            seconds++;
+            let displayTime = seconds + ' sec';
+            if (seconds > 59) {
+                const minutes = Math.floor(seconds / 60);
+                const remainingSeconds = seconds % 60;
+                displayTime = `${minutes} min ${remainingSeconds} sec`;
+            }
+            timerDiv.textContent = displayTime;
+
+            if (seconds === 15) {
+                alert('Temps de consultation a dépassé 15 secondes!');
+            }
+
+            if (seconds === 30) {
+                document.body.style.backgroundColor = 'red';
+                document.body.style.color = 'white';
+            }
+
+            if (seconds === 45) {
+                alert('La page va se fermer dans 20 secondes');
+            }
+
+            if (seconds === 67) {
+                alert('La page va se fermer');
+                window.close();
+            }
+        };
+
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>

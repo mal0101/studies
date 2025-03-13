@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 0</title>
+    <style>
+        .transparent-layer {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0); /* Transparent background */
+        }
+        .color-layer {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin: 5px;
+        }
+        #layer-a {
+            width: 200px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0); /* Transparent background */
+            margin-top: 10px;
+        }
+        #layer-b, #layer-c {
+            width: 200px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        #layer-b {
+            background-color: yellow;
+        }
+        #layer-c {
+            background-color: red;
+        }
+        .icon {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset></fieldset>
+        <select name="cities" id="cities"></select>
+            <option value="casablanca">Casablanca</option>
+            <option value="kech">Kech</option>
+            <option value="tanger">Tanger</option>
+            <option value="ouarzazat">Ouarzazat</option>
+            <option value="saidia">Saidia</option>
+            <option value="autre">Autre</option>
+        </select>
+    </fieldset>
+    <div class="transparent-layer" id="transparent-layer"></div>
+    <div id="additional-fields"></div>
+
+    <fieldset></fieldset>
+        <div class="color-layer" style="background-color: red;" data-color="red"></div>
+        <div class="color-layer" style="background-color: orange;" data-color="orange"></div>
+        <div class="color-layer" style="background-color: blue;" data-color="blue"></div>
+        <div class="color-layer" style="background-color: green;" data-color="green"></div>
+        <div class="color-layer" style="background-color: purple;" data-color="purple"></div>
+        <div id="layer-a"></div>
+    </fieldset>
+
+    <fieldset>
+        <textarea name="TA" id="TA"></textarea>
+        <span class="icon" id="copy-icon">📋</span>
+        <span class="icon" id="cut-icon">✂️</span>
+        <span class="icon" id="clear-icon">❌</span>
+        <div id="layer-b"></div>
+        <div id="layer-c"></div>
+    </fieldset>
+
+    <script>
+        const cityColors = {
+            casablanca: 'red',
+            kech: 'orange',
+            tanger: 'blue',
+            ouarzazat: 'green',
+            saidia: 'purple'
+        };
+
+        const citiesSelect = document.getElementById('cities');
+        const transparentLayer = document.getElementById('transparent-layer');
+        const additionalFields = document.getElementById('additional-fields');
+        const layerA = document.getElementById('layer-a');
+        const colorLayers = document.querySelectorAll('.color-layer');
+        const textArea = document.getElementById('TA');
+        const layerB = document.getElementById('layer-b');
+        const layerC = document.getElementById('layer-c');
+        const copyIcon = document.getElementById('copy-icon');
+        const cutIcon = document.getElementById('cut-icon');
+        const clearIcon = document.getElementById('clear-icon');
+
+        citiesSelect.addEventListener('change', function() {
+            const selectedCity = this.value;
+
+            if (selectedCity === 'autre') {
+                showAdditionalFields();
+            } else {
+                transparentLayer.style.backgroundColor = cityColors[selectedCity] || 'transparent';
+                additionalFields.innerHTML = '';
+            }
+        });
+
+        function showAdditionalFields() {
+            additionalFields.innerHTML = `
+                <input type="text" id="new-city" placeholder="Enter city name">
+                <input type="color" id="color-picker">
+                <span id="color-value"></span>
+                <button id="add-city">Add City</button>
+            `;
+
+            const colorPicker = document.getElementById('color-picker');
+            const colorValue = document.getElementById('color-value');
+            const addCityButton = document.getElementById('add-city');
+
+            colorPicker.addEventListener('input', function() {
+                const color = this.value;
+                colorValue.textContent = color;
+                transparentLayer.style.backgroundColor = color;
+            });
+
+            addCityButton.addEventListener('click', function() {
+                const newCityName = document.getElementById('new-city').value;
+                const newCityColor = colorPicker.value;
+
+                if (newCityName) {
+                    const newOption = document.createElement('option');
+                    newOption.value = newCityName.toLowerCase();
+                    newOption.textContent = newCityName;
+
+                    const autreOption = citiesSelect.querySelector('option[value="autre"]');
+                    citiesSelect.insertBefore(newOption, autreOption);
+
+                    cityColors[newCityName.toLowerCase()] = newCityColor;
+                    citiesSelect.value = newCityName.toLowerCase();
+                    transparentLayer.style.backgroundColor = newCityColor;
+                    additionalFields.innerHTML = '';
+                }
+            });
+        }
+
+        colorLayers.forEach(layer => {
+            layer.addEventListener('mouseover', function() {
+                layerA.style.backgroundColor = this.dataset.color;
+            });
+
+            layer.addEventListener('mouseout', function() {
+                layerA.style.backgroundColor = 'transparent';
+            });
+        });
+
+        function updateLayer(layer, color) {
+            let text = textArea.value.replace(/\s+/g, ' ').trim();
+            let wordCount = text.split(' ').length;
+            layer.innerHTML = `${text} <br> ce texte contient ${wordCount} mots`;
+            layer.style.color = color;
+        }
+
+        textArea.addEventListener('copy', function() {
+            updateLayer(layerB, 'blue');
+        });
+
+        textArea.addEventListener('cut', function() {
+            updateLayer(layerC, 'white');
+        });
+
+        copyIcon.addEventListener('click', function() {
+            updateLayer(layerB, 'blue');
+        });
+
+        cutIcon.addEventListener('click', function() {
+            updateLayer(layerC, 'white');
+        });
+
+        clearIcon.addEventListener('dblclick', function() {
+            if (confirm('Are you sure you want to clear the text?')) {
+                textArea.value = '';
+            }
+        });
+    </script>
+</body>
+</html>
