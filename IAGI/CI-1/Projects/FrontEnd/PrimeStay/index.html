@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeStay - Premium Hotel Bookings</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">PrimeStay</a>
+            <div class="nav-right">
+                <select class="currency-select">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+                <a href="#" class="nav-link">List your property</a>
+                <a href="#" class="nav-link"><i class="far fa-heart"></i> Favorites</a>
+                <a href="/IAGI/CI-1/Projects/FrontEnd/PrimeStay/pages/login.html" class="nav-link">Sign in</a>
+                <a href="/IAGI/CI-1/Projects/FrontEnd/PrimeStay/pages/register.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="search-hero">
+        <div class="container">
+            <h1>Find your next stay</h1>
+            <p>Search deals on hotels, homes, and much more...</p>
+            
+            <form class="search-form">
+                <div class="search-input location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Where are you going?">
+                </div>
+                
+                <div class="search-input dates">
+                    <div class="calendar-wrapper">
+                        <div class="date-inputs">
+                            <div class="check-in">
+                                <i class="fas fa-calendar"></i>
+                                <input type="text" placeholder="Check-in" readonly>
+                            </div>
+                            <div class="check-out">
+                                <i class="fas fa-calendar"></i>
+                                <input type="text" placeholder="Check-out" readonly>
+                            </div>
+                        </div>
+                        <div class="calendar-container">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <button type="button" class="prev-month">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <h4>March 2024</h4>
+                                    <button type="button" class="next-month">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Sun</th>
+                                            <th>Mon</th>
+                                            <th>Tue</th>
+                                            <th>Wed</th>
+                                            <th>Thu</th>
+                                            <th>Fri</th>
+                                            <th>Sat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="disabled"></td>
+                                            <td class="disabled"></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                            <td>11</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>14</td>
+                                            <td>15</td>
+                                            <td>16</td>
+                                            <td>17</td>
+                                            <td>18</td>
+                                            <td>19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>21</td>
+                                            <td>22</td>
+                                            <td>23</td>
+                                            <td>24</td>
+                                            <td>25</td>
+                                            <td>26</td>
+                                        </tr>
+                                        <tr>
+                                            <td>27</td>
+                                            <td>28</td>
+                                            <td>29</td>
+                                            <td>30</td>
+                                            <td>31</td>
+                                            <td class="disabled"></td>
+                                            <td class="disabled"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="search-input">
+                    <i class="fas fa-user"></i>
+                    <div class="guest-selector">
+                        2 adults · 0 children
+                    </div>
+                </div>
+                
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Property Types -->
+    <section class="property-types">
+        <div class="container">
+            <h2 class="section-title">Browse by property type</h2>
+            <div class="type-grid">
+                <div class="type-card">
+                    <img src="images/hotels.jpg" alt="Hotels">
+                    <div class="type-card-content">
+                        <h3><a href="/IAGI/CI-1/Projects/FrontEnd/PrimeStay/pages/hotels.html">Hotels</a></h3>
+                        <p>870,251 hotels</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <img src="images/apartments.jpg" alt="Apartments">
+                    <div class="type-card-content">
+                        <h3>Apartments</h3>
+                        <p>456,785 apartments</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <img src="images/resorts.jpg" alt="Resorts">
+                    <div class="type-card-content">
+                        <h3>Resorts</h3>
+                        <p>157,485 resorts</p>
+                    </div>
+                </div>
+                <div class="type-card">
+                    <img src="images/villas.jpg" alt="Villas">
+                    <div class="type-card-content">
+                        <h3>Villas</h3>
+                        <p>248,578 villas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="popular-destinations">
+        <div class="container">
+            <h2 class="section-title">Popular destinations</h2>
+            <div class="destination-grid">
+                <div class="destination-card">
+                    <img src="images/paris.jpg" alt="Paris">
+                    <div class="destination-info">
+                        <h3>Paris</h3>
+                        <p>4,568 properties</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/london.jpg" alt="London">
+                    <div class="destination-info">
+                        <h3>London</h3>
+                        <p>3,785 properties</p>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="images/newyork.jpg" alt="New York">
+                    <div class="destination-info">
+                        <h3>New York</h3>
+                        <p>2,956 properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

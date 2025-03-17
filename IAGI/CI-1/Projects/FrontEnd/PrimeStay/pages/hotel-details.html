@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ritz-Carlton Paris - PrimeStay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/hotel-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">PrimeStay</a>
+            <div class="nav-right">
+                <select class="currency-select">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+                <a href="#" class="nav-link">List your property</a>
+                <a href="#" class="nav-link"><i class="far fa-heart"></i> Favorites</a>
+                <a href="login.html" class="nav-link">Sign in</a>
+                <a href="register.html" class="btn-register">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hotel Header -->
+    <header class="hotel-header">
+        <div class="container">
+            <div class="hotel-title">
+                <h1>The Ritz-Carlton Paris</h1>
+                <div class="hotel-rating">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-score">9.8 Exceptional</span>
+                    <span class="review-count">(1,245 reviews)</span>
+                </div>
+                <p class="hotel-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    15 Place Vendôme, 1st arr., 75001 Paris, France
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Image Gallery -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-main">
+                    <img src="../images/hotel-main.jpg" alt="Hotel Main">
+                </div>
+                <div class="gallery-thumbs">
+                    <img src="../images/hotel-room.jpg" alt="Room">
+                    <img src="../images/hotel-pool.jpg" alt="Pool">
+                    <img src="../images/hotel-restaurant.jpg" alt="Restaurant">
+                    <img src="../images/hotel-spa.jpg" alt="Spa">
+                </div>
+                <button class="view-all-photos">
+                    <i class="fas fa-images"></i> View all photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="hotel-details">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Left Column -->
+                <div class="details-main">
+                    <!-- Description -->
+                    <section class="hotel-description">
+                        <h2>About this hotel</h2>
+                        <p>Located in the heart of Paris, The Ritz-Carlton offers luxury accommodations with a classic French elegance. This 5-star hotel features exquisite dining options, a world-class spa, and impeccable service.</p>
+                        
+                        <div class="highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-map"></i>
+                                <div>
+                                    <h4>Perfect location</h4>
+                                    <p>Located in the 1st arr., rated 9.9/10</p>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-concierge-bell"></i>
+                                <div>
+                                    <h4>5-star service</h4>
+                                    <p>24/7 concierge and room service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Amenities -->
+                    <section class="hotel-amenities">
+                        <h2>Popular amenities</h2>
+                        <div class="amenities-grid">
+                            <div class="amenity-item">
+                                <i class="fas fa-swimming-pool"></i>
+                                <span>Pool</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-spa"></i>
+                                <span>Spa</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-wifi"></i>
+                                <span>Free WiFi</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-parking"></i>
+                                <span>Parking</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-utensils"></i>
+                                <span>Restaurant</span>
+                            </div>
+                            <div class="amenity-item">
+                                <i class="fas fa-dumbbell"></i>
+                                <span>Fitness center</span>
+                            </div>
+                        </div>
+                        <button class="show-all-amenities">Show all amenities</button>
+                    </section>
+
+                    <!-- Reviews -->
+                    <section class="hotel-reviews">
+                        <h2>Guest reviews</h2>
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <span class="rating">9.8</span>
+                                <div class="rating-text">
+                                    <h4>Exceptional</h4>
+                                    <p>1,245 verified reviews</p>
+                                </div>
+                            </div>
+                            <div class="rating-categories">
+                                <div class="rating-category">
+                                    <span>Cleanliness</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 98%"></div>
+                                    </div>
+                                    <span>9.8</span>
+                                </div>
+                                <div class="rating-category">
+                                    <span>Location</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 99%"></div>
+                                    </div>
+                                    <span>9.9</span>
+                                </div>
+                                <div class="rating-category">
+                                    <span>Service</span>
+                                    <div class="rating-bar">
+                                        <div class="rating-fill" style="width: 97%"></div>
+                                    </div>
+                                    <span>9.7</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Individual Reviews -->
+                        <div class="reviews-list">
+                            <!-- Review Item -->
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <div class="reviewer-avatar">JD</div>
+                                        <div class="reviewer-info">
+                                            <h4>John Doe</h4>
+                                            <p>United States</p>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">9.8</div>
+                                </div>
+                                <div class="review-content">
+                                    <p>"Exceptional service and beautiful property. The location is perfect for exploring Paris."</p>
+                                </div>
+                                <div class="review-date">Reviewed: March 15, 2024</div>
+                            </div>
+                            <!-- More review items -->
+                        </div>
+                        <button class="show-all-reviews">Show all reviews</button>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <aside class="booking-sidebar">
+                    <div class="booking-card">
+                        <div class="price-header">
+                            <div class="price">
+                                <span class="amount">$599</span>
+                                <span class="per-night">per night</span>
+                            </div>
+                            <div class="original-price">
+                                <span class="strikethrough">$699</span>
+                                <span class="discount-badge">15% OFF</span>
+                            </div>
+                        </div>
+
+                        <form class="booking-form">
+                            <div class="date-inputs">
+                                <div class="input-group">
+                                    <label>Check-in</label>
+                                    <input type="date" required>
+                                </div>
+                                <div class="input-group">
+                                    <label>Check-out</label>
+                                    <input type="date" required>
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Guests</label>
+                                <select>
+                                    <option>2 adults, 0 children</option>
+                                    <option>2 adults, 1 child</option>
+                                    <option>2 adults, 2 children</option>
+                                </select>
+                            </div>
+
+                            <div class="input-group">
+                                <label>Rooms</label>
+                                <select>
+                                    <option>1 room</option>
+                                    <option>2 rooms</option>
+                                    <option>3 rooms</option>
+                                </select>
+                            </div>
+
+                            <div class="price-summary">
+                                <div class="price-row">
+                                    <span>$599 x 5 nights</span>
+                                    <span>$2,995</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Taxes and fees</span>
+                                    <span>$359</span>
+                                </div>
+                                <div class="price-total">
+                                    <span>Total</span>
+                                    <span>$3,354</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="book-now-btn">
+                               <a href="/IAGI/CI-1/Projects/FrontEnd/PrimeStay/pages/booking.html" id="book-now">Book now</a> 
+                            </button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/hotel-details.js"></script>
+</body>
+</html>

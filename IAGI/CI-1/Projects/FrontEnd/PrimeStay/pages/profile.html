@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - PrimeStay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">PrimeStay</a>
+            <div class="nav-right">
+                <select class="currency-select">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+                <a href="#" class="nav-link">List your property</a>
+                <a href="#" class="nav-link"><i class="far fa-heart"></i> Favorites</a>
+                <div class="profile-dropdown">
+                    <button class="profile-btn">
+                        <!-- <img src="../images/profile-avatar.jpg" alt="Profile"> -->
+                        <span>John Doe</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="profile-content">
+        <div class="container">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-avatar-wrapper">
+                        <img src="../images/profile-avatar.jpg" alt="John Doe" class="profile-avatar"> 
+                        <button class="edit-avatar">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-text">
+                        <h1>John Doe</h1>
+                        <p>Member since March 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-grid">
+                <!-- Sidebar Navigation -->
+                <aside class="profile-sidebar">
+                    <nav class="profile-nav">
+                        <a href="#personal" class="active">
+                            <i class="fas fa-user"></i>
+                            Personal Info
+                        </a>
+                        <a href="#bookings">
+                            <i class="fas fa-clock-rotate-left"></i>
+                            Booking History
+                        </a>
+                        <a href="#saved">
+                            <i class="far fa-heart"></i>
+                            Saved Properties
+                        </a>
+                        <a href="#payment">
+                            <i class="fas fa-credit-card"></i>
+                            Payment Methods
+                        </a>
+                        <a href="#notifications">
+                            <i class="fas fa-bell"></i>
+                            Notifications
+                        </a>
+                        <a href="#security">
+                            <i class="fas fa-shield-alt"></i>
+                            Security
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="profile-main">
+                    <!-- Personal Information -->
+                    <section id="personal" class="profile-section">
+                        <div class="section-header">
+                            <h2>Personal Information</h2>
+                            <button class="edit-btn">
+                                <i class="fas fa-pen"></i> Edit
+                            </button>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>First Name</label>
+                                <p>John</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Last Name</label>
+                                <p>Doe</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Email</label>
+                                <p>john.doe@example.com</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Phone</label>
+                                <p>+1 234 567 890</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Country</label>
+                                <p>United States</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Language</label>
+                                <p>English</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Recent Bookings -->
+                    <section id="bookings" class="profile-section">
+                        <div class="section-header">
+                            <h2>Recent Bookings</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="bookings-list">
+                            <div class="booking-card">
+                                <img src="../images/hotel1.jpg" alt="Hotel">
+                                <div class="booking-details">
+                                    <h3>The Ritz-Carlton Paris</h3>
+                                    <div class="booking-dates">
+                                        <div class="date-group">
+                                            <span class="label">Check-in</span>
+                                            <span class="value">Mar 20, 2024</span>
+                                        </div>
+                                        <div class="date-group">
+                                            <span class="label">Check-out</span>
+                                            <span class="value">Mar 25, 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="booking-status">
+                                        <span class="status confirmed">Confirmed</span>
+                                        <span class="booking-id">Booking ID: #123456</span>
+                                    </div>
+                                </div>
+                                <div class="booking-actions">
+                                    <button class="action-btn">
+                                        <i class="fas fa-receipt"></i> View Details
+                                    </button>
+                                    <button class="action-btn">
+                                        <i class="fas fa-times"></i> Cancel
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Saved Properties -->
+                    <section id="saved" class="profile-section">
+                        <div class="section-header">
+                            <h2>Saved Properties</h2>
+                            <a href="#" class="view-all">View All</a>
+                        </div>
+                        <div class="saved-properties">
+                            <div class="property-card">
+                                <img src="../images/hotel2.jpg" alt="Hotel">
+                                <div class="property-details">
+                                    <h3>Mountain View Resort</h3>
+                                    <p class="location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Swiss Alps
+                                    </p>
+                                    <div class="property-rating">
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="rating">9.5</span>
+                                    </div>
+                                    <div class="property-price">
+                                        <span class="price">$399</span>
+                                        <span class="per-night">per night</span>
+                                    </div>
+                                </div>
+                                <button class="remove-saved">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html>
