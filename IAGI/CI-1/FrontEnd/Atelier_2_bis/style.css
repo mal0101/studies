@@ -1,0 +1,57 @@
+/* Réinitialisation des styles */
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 10px; 
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Menu burger caché par défaut */
+
+.burger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/*  Section Hero */
+
+.hero {
+    padding: 40px 20px;
+}
+
+.hero img {
+    max-width: 100%;
+    
+}
