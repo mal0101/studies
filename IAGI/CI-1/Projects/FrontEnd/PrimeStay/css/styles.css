@@ -8,15 +8,15 @@
 
 /* Color Palette */
 :root {
-    --primary-color: #1b1c1d;     /* Rich Black */
-    --secondary-color: #1b1c1d;   /* Soft Black */
-    --accent-color: hsl(62, 83%, 65%);      /* Elegant Gold */
-    --accent-hover: hsl(62, 83%, 65%);      /* Light Gold */
-    --text-color: #ffffff;        /* White */
-    --text-secondary: #e0e0e0;    /* Light Gray */
-    --gold-gradient: linear-gradient(145deg, hsl(62, 83%, 65%), hsl(62, 83%, 65%)); /* Gold Gradient */
-    --background: #0a0a0a;        /* Deep Black */
-    --card-bg: #1d1d1d;           /* Slightly Lighter Black */
+    --primary-color: #1b1c1d;    
+    --secondary-color: #1b1c1d;  
+    --accent-color: hsl(62, 83%, 65%);      
+    --accent-hover: hsl(62, 83%, 65%);      
+    --text-color: #ffffff;      
+    --text-secondary: #e0e0e0;   
+    --gold-gradient: linear-gradient(145deg, hsl(62, 83%, 65%), hsl(62, 83%, 65%)); 
+    --background: #0a0a0a;        
+    --card-bg: #1d1d1d;           
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     --gold-shadow: 0 4px 15px rgba(200, 166, 85, 0.2);
 }
