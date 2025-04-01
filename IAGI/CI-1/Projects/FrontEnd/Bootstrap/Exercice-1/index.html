@@ -153,22 +153,20 @@
     <br> <br>
     <!--Contact Section-->
     <section id="contact" class="py-5">
-        <div class="container">
+        <div class="contact-container">
             <h2 class="contacter-nous">Contacter nous</h2>
             <hr> 
             <p>Chez IAGI-Travel nous savons que voyager estune aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Votre Nom">
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Votre Email">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Votre Nom:</label>
+                    <input type="text" id="name" placeholder="Votre Nom" class="form-control">
                 </div>
+                <div class="form-group">
+                    <label for="email">Votre Email:</label>
+                    <input type="email" id="name" placeholder="Votre Email" class="form-control">
+                </div> 
+                <button class="submit-btn">Submit</button>
             </div>
         </div>
     </section>

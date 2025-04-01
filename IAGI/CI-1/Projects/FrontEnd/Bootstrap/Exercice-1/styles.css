@@ -167,4 +167,37 @@
 .contacter-nous {
     text-align: center;
 }
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.form-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.form-group {
+    flex: 1;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    background-color: rgb(0, 128, 148);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    border: none;
+    border-radius: 3px;
+}
