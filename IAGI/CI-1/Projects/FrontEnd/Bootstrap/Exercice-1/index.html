@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">IAGI-Travel</a>
+            <a class="navbar-brand" href="#">IAGI-Travel <span class="orange-dot">.</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -44,7 +44,7 @@
     <br>
     <br>
     <!--Destinations Section-->
-    <div class="slider-container">
+    <div class="slider-container" id="destinations">
         <div class="slider">
             <div class="slide">
                 <img src="/IAGI/CI-1/Projects/FrontEnd/Bootstrap/Exercice-1/images/slide0.jpg" alt="idk">
@@ -93,7 +93,7 @@
     </div>
     <br> <br>
     <!--Circuits Section-->
-    <section>
+    <section id="circuits">
     <div class="container">
         <div class="row">
             <!--planifier-->
@@ -153,23 +153,23 @@
     <br> <br>
     <!--Contact Section-->
     <section id="contact" class="py-5">
-        <div class="contact-container">
-            <h2 class="contacter-nous">Contacter nous</h2>
-            <hr> 
-            <p>Chez IAGI-Travel nous savons que voyager estune aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name">Votre Nom:</label>
-                    <input type="text" id="name" placeholder="Votre Nom" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="email">Votre Email:</label>
-                    <input type="email" id="name" placeholder="Votre Email" class="form-control">
-                </div> 
-                <button class="submit-btn">Submit</button>
+    <div class="contact-container">
+        <h2 class="contacter-nous">Contacter nous</h2>
+        <hr> 
+        <p>Chez IAGI-Travel nous savons que voyager estune aventure humaine mais également un engagement financier important pour vous. C'est pourquoi nous mettons un point d'honneur à prendre en compte chacune de vos attentes pour vous aider dans la préparation de votre séjour, circuit ou voyage sur mesure.</p>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input type="text" id="name" placeholder="Votre Nom" class="form-control">
+            </div>
+            <div class="form-group col-md-4">
+                <input type="email" id="email" placeholder="Votre Email" class="form-control">
+            </div> 
+            <div class="form-group col-md-4">
+                <button class="submit-btn form-control">Submit</button>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     <!--Footer Section-->
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
