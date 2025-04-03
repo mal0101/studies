@@ -29,7 +29,11 @@
 .navbar-brand {
     font-size: 1.5rem;
     font-family: 'Times New Roman', Times, serif;
-    color:white;
+
+}
+
+#iagi-travel {
+        color:white;
 }
 
 .orange-dot {
@@ -69,7 +73,7 @@
 
 .slider {
     width: 100%;
-    height: 500px; /* Adjust as needed */
+    height: 500px; 
 }
 
 .slide {
@@ -119,25 +123,81 @@
     background-color: white;
 }
 
+
+.service-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
 .icon-container {
-    width: 80px;
-    height: 80px;
-    border: 2px solid #333;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 25px;
+    background-color: white;
     border-radius: 50%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .icon-container img {
-    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.service-card {
+    padding: 30px;
+    background: white;
+
+    transition: transform 0.3s ease;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    color: #333;
+    font-size: 24px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-size: 16px;
 }
 
 
-
-.col-md-4 {
-    border: 1px ridge rgb(192, 188, 188);
+@media (max-width: 768px) {
+    .service-card {
+        margin: 10px 0;
+    }
+    
+    .icon-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .icon-container img {
+        width: 50px;
+        height: 50px;
+    }
 }
+
+
 
 .card {
     border-radius: 10px;
@@ -202,7 +262,7 @@
     color: white;
     padding: 8px;
     text-align: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     border: none;
     border-radius: 4px;
     width: 100%;
@@ -212,3 +272,150 @@
 .form-group label {
     display:none;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  
+
+
+@media screen and (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #212529; /* Dark background to match navbar */
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        gap: 1rem;
+    }
+
+    .nav-item {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        padding: 0.5rem 0;
+    }
+    .hero-content {
+        left: 50%;
+        width: 80%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .slider {
+        height: 400px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: 400px;
+    }
+
+    .hero-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-content p {
+        text-align: center;
+    }
+
+    .slider {
+        height: 300px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .hero-section {
+        height: 350px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .caption {
+        bottom: 10px;
+    }
+
+    .caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .slider-nav {
+        bottom: 10px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .icon-container {
+        width: 90px;
+        height: 90px;
+    }
+
+    .icon-container img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-container {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-content {
+        top: 60%;
+    }
+}
+
