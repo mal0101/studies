@@ -1,0 +1,80 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .task:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task.completed {
+    opacity: 0.7;
+    background-color: #f9f9f9;
+  }
+  
+  .task-content {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .task-content input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .task-content span {
+    word-break: break-word;
+  }
+  
+  .completed-text {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .task-actions {
+    display: flex;
+  }
+  
+  .task-actions button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .edit-btn {
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .save-btn {
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #999;
+    color: white;
+  }
+  
+  .edit-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-right: 5px;
+  }

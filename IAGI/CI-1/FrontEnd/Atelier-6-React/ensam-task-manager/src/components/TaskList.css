@@ -1,0 +1,9 @@
+.task-list {
+    margin-top: 20px;
+  }
+  
+  .no-tasks {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+  }
